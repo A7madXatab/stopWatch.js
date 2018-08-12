@@ -27,6 +27,8 @@ html,body{
 .btn{
     text-align: center;
     font-size: 20px;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
     width: 130px;
     margin: 10px;
     border-radius: 5px;
@@ -35,15 +37,22 @@ html,body{
 .pauseButton{
     background-color: red;
     color: white;
+    cursor: pointer;
     border-color: #000;
+    transition: all;
 }
 .startButton{
     background: rgb(3, 78, 3);
+  
+    cursor: pointer;
     color: white;
+    transition: all;
     border-color: white;
 }
 .resetButton{
     background-color: grey;
+    transition: all;
+     cursor: pointer;
     color:#000;
     border-color: #000;
 }
