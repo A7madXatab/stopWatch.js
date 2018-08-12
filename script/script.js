@@ -66,23 +66,30 @@ class stopWatch extends Component
 
         pauseButton = $("<button>").addClass("btn pauseButton").html("Pause");
         pauseButton.on("click",()=>{
-            if(!this.isOn)
-            clearTimeout(this.timer);
-            else 
-            this.start();
+           this.pause();
         })
         buttonsDiv.append(pauseButton);
 
         resetButton = $("<button>").addClass("btn resetButton").html("Reset");
         resetButton.on("click",()=>{
-         this.hour = 0;
-         this.seconds=0;
-         this.mins = 0;
-         this.milliseconds=0;
-         this.str =this.hour+":"+this.mins+":"+this.seconds+":"+this.milliseconds;
-         this.notify();
-        })
+            this.reset();
+        });
         buttonsDiv.append(resetButton)
+    }
+    pause(){
+        if(!this.isOn)
+        clearTimeout(this.timer);
+        else 
+        this.start();
+    }
+    reset()
+    {
+        this.hour = 0;
+        this.seconds=0;
+        this.mins = 0;
+        this.milliseconds=0;
+        this.str =this.hour+":"+this.mins+":"+this.seconds+":"+this.milliseconds;
+        this.notify();
     }
     start(){
      
